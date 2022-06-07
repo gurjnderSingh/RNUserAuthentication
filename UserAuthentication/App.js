@@ -3,10 +3,14 @@ import {View, Text, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {COLOR} from './constants/styles';
+import LoginUI from './Screens/Login';
+import Button from './UI/Button';
 function App() {
   return (
     <View style={styles.rootContainer}>
-      <Text>Hello</Text>
+      {/* <Text>Hello</Text> */}
+      <Button>This is button This is button </Button>
+
     </View>
   );
 }
