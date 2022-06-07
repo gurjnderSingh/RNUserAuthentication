@@ -9,8 +9,7 @@ function App() {
   return (
     <View style={styles.rootContainer}>
       {/* <Text>Hello</Text> */}
-      <Button>This is button This is button </Button>
-
+      <Button onPress={()=>{console.log('Do Something')}}>This is button This is button </Button>
     </View>
   );
 }

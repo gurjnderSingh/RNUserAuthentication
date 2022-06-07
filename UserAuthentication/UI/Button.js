@@ -2,8 +2,10 @@ import React from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import {COLOR} from '../constants/styles';
 function Button({children, onPress}) {
-  return  (
-    <Pressable onPress={onPress} style={({pressed})=> [styles.button, pressed && styles.opacity]}>
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({pressed}) => [styles.button, pressed && styles.opacity]}>
       <View>
         <Text style={styles.buttonText}>{children}</Text>
       </View>
@@ -25,6 +27,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   opacity: {
-      opacity: 0.3
-  }
+    opacity: 0.3,
+  },
 });
