@@ -6,9 +6,11 @@ import {COLOR} from './constants/styles';
 import LoginUI from './Screens/Login';
 import Button from './UI/Button';
 import WelcomeScreen from './Screens/WelcomeScreen';
+import FlatButton from './UI/FlatButton';
+import LoadingOverlay from './UI/LoadingOverlay';
 function App() {
   return(
-    <WelcomeScreen/>
+    <LoadingOverlay message="Nice to have you"/>
   )
   return (
     <View style={styles.rootContainer}>
