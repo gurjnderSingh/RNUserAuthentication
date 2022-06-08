@@ -5,7 +5,11 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {COLOR} from './constants/styles';
 import LoginUI from './Screens/Login';
 import Button from './UI/Button';
+import WelcomeScreen from './Screens/WelcomeScreen';
 function App() {
+  return(
+    <WelcomeScreen/>
+  )
   return (
     <View style={styles.rootContainer}>
       {/* <Text>Hello</Text> */}
