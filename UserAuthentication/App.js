@@ -8,14 +8,18 @@ import Button from './UI/Button';
 import WelcomeScreen from './Screens/WelcomeScreen';
 import FlatButton from './UI/FlatButton';
 import LoadingOverlay from './UI/LoadingOverlay';
+import IconButton from './UI/IconButton';
+
 function App() {
-  return(
-    <LoadingOverlay message="Nice to have you"/>
-  )
   return (
     <View style={styles.rootContainer}>
       {/* <Text>Hello</Text> */}
-      <Button onPress={()=>{console.log('Do Something')}}>This is button This is button </Button>
+      <Button
+        onPress={() => {
+          console.log('Do Something');
+        }}>
+        This is button
+      </Button>
     </View>
   );
 }
@@ -26,6 +30,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: COLOR.primary100
+    backgroundColor: COLOR.primary100,
   },
 });
