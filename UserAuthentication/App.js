@@ -9,17 +9,13 @@ import WelcomeScreen from './Screens/WelcomeScreen';
 import FlatButton from './UI/FlatButton';
 import LoadingOverlay from './UI/LoadingOverlay';
 import IconButton from './UI/IconButton';
+import AuthForm from './Auth/AuthForm';
+import AuthContent from './Auth/AuthContent';
 
 function App() {
   return (
     <View style={styles.rootContainer}>
-      {/* <Text>Hello</Text> */}
-      <Button
-        onPress={() => {
-          console.log('Do Something');
-        }}>
-        This is button
-      </Button>
+      <AuthContent islogin={false}/>
     </View>
   );
 }
