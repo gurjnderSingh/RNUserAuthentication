@@ -8,6 +8,7 @@ function Input({label, keyboardType, secure, onUpdateValue, value, isInvalid}) {
       <Text style={[styles.label && isInvalid && styles.labelInvalid]}>
         {label}
       </Text>
+      {console.log('ddddd',value)}
       <TextInput
         // style={[styles.input && isInvalid && styles.inputInvalid]}
         style={styles.input}
@@ -16,7 +17,7 @@ function Input({label, keyboardType, secure, onUpdateValue, value, isInvalid}) {
         secureTextEntry={secure}
         keyboardType={keyboardType}
         value={value}
-        onChange={onUpdateValue}
+        onChange={ (value) => onUpdateValue(value)}
       />
     </View>
   );;
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
   },
   labelInvalid: {
     color: COLOR.error500,
+    color: 'white'
   },
   input: {
     backgroundColor: COLOR.primary100,
