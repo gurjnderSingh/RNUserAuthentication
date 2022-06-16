@@ -4,7 +4,7 @@ import AuthContent from '../Auth/AuthContent';
 
 function SignUpScreen() {
     return(
-         <AuthContent />
+         <AuthContent isLogin={false} />
     )
 }
 

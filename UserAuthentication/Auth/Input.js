@@ -3,12 +3,16 @@ import {View, Text, StyleSheet, TextInput} from 'react-native';
 import {COLOR} from '../constants/styles';
 
 function Input({label, keyboardType, secure, onUpdateValue, value, isInvalid}) {
+
+  function updateVal(enteredVal) {
+    console.log(enteredVal);
+    onUpdateValue(enteredVal)
+  }
   return  (
     <View style={styles.inputContainer}>
       <Text style={[styles.label && isInvalid && styles.labelInvalid]}>
         {label}
       </Text>
-      {console.log('ddddd',value)}
       <TextInput
         // style={[styles.input && isInvalid && styles.inputInvalid]}
         style={styles.input}
@@ -17,10 +21,10 @@ function Input({label, keyboardType, secure, onUpdateValue, value, isInvalid}) {
         secureTextEntry={secure}
         keyboardType={keyboardType}
         value={value}
-        onChange={ (value) => onUpdateValue(value)}
+        onChangeText={updateVal}
       />
     </View>
-  );;
+  );
 }
 export default Input;
 
@@ -35,7 +39,6 @@ const styles = StyleSheet.create({
   },
   labelInvalid: {
     color: COLOR.error500,
-    color: 'white'
   },
   input: {
     backgroundColor: COLOR.primary100,

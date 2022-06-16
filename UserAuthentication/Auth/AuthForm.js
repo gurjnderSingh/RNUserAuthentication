@@ -9,19 +9,18 @@ function AuthForm({islogin, onSubmit, credentialsInvalid}) {
   const [enteredPassword, setenteredPassword] = useState('');;
   const [enteredConfirmPassword, setenteredConfirmPassword] = useState('');;
 
-  // const {
-  //     email: emailIsInvalid,
-  //     confirmEmail: emailsDontMatch,
-  //     password: passwordIsInvalid,
-  //     confirmPassword: passwordsDontMatch,
-  //   } = credentialsInvalid;
+  const {
+      email: emailIsInvalid,
+      confirmEmail: emailsDontMatch,
+      password: passwordIsInvalid,
+      confirmPassword: passwordsDontMatch,
+    } = credentialsInvalid;
 
   function updateInputValuesHandler(inputType, enteredValue) {
     console.log('setting it');
     switch  (inputType) {
       case 'email':
         setenteredEmail(enteredValue);
-        console.log(enteredEmail);;
         break;
       case 'confirmEmail':
         setenteredConfirmEmail(enteredValue);
@@ -52,8 +51,7 @@ function AuthForm({islogin, onSubmit, credentialsInvalid}) {
           keyboardType="email-address"
           // isInvalid={emailIsInvalid}
           value={enteredEmail}
-
-                onUpdateValue={(value)=> updateInputValuesHandler('email', value)}
+          onUpdateValue={(value)=> updateInputValuesHandler('email', value)}
         />
         {!islogin && (
           <Input
