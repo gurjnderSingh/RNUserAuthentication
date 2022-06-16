@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-function LoginUI() {
+function LoginScreen() {
     return(
         <View>
             <Text>LoginUI</Text>
         </View>
     )
 }
-export default LoginUI;
+export default LoginScreen;

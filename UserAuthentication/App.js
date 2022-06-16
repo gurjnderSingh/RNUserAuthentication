@@ -18,27 +18,25 @@ import LoginScreen from './Screens/LoginScreen';
 const Stack = createNativeStackNavigator();
 
 function AuthStack() {
-  return(
+  return (
     <Stack.Navigator
-    screenOptions={{
-      headerStyle: {backgroundColor: COLOR.primary500},
-      headerTintColor:'white',
-      contentStyle: {backgroundColor: COLOR.primary100}
-    }}
-    >
-       {/* <Stack.Screen name='Login' component={LoginScreen}/> */}
-      <Stack.Screen name='SignUp' component={SignUpScreen}/>
-
+      screenOptions={{
+        headerStyle: {backgroundColor: COLOR.primary500},
+        headerTintColor: 'white',
+        contentStyle: {backgroundColor: COLOR.primary100},
+      }}>
+      {/* <Stack.Screen name="Login" component={LoginScreen} /> */}
+      <Stack.Screen name="SignUp" component={SignUpScreen} />
     </Stack.Navigator>
-  )
+  );
 }
 
 function Navigation() {
-  return(
-  <NavigationContainer>
-    <AuthStack/>
-  </NavigationContainer>
-  )
+  return (
+    <NavigationContainer>
+      <AuthStack />
+    </NavigationContainer>
+  );
 }
 function App() {
   return (

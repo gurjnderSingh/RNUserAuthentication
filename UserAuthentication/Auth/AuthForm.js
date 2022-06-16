@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import Buttton from '../UI/Button';
 import Input from './Input';
 
-function AuthForm({islogin, submit, credentialsInvalid}) {
+function AuthForm({islogin, onSubmit, credentialsInvalid}) {
   const [enteredEmail, setenteredEmail] = useState('');;
   const [enteredConfirmEmail, setenteredConfirmEmail] = useState('');;
   const [enteredPassword, setenteredPassword] = useState('');;
@@ -36,13 +36,13 @@ function AuthForm({islogin, submit, credentialsInvalid}) {
   }
 
   const onSubmitHandler = () => {
-    onsubmit({
+    onSubmit({
       email: enteredEmail,
       confirmEmail: enteredConfirmEmail,
       password: enteredPassword,
       confirmPassword: enteredConfirmPassword,
-    });;
-  };;
+    });
+  };
 
   return  (
     <View>
