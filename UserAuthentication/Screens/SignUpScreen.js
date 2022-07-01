@@ -1,11 +1,9 @@
 import React from 'react';
-import {View,Text} from 'react-native';
+import {View, Text} from 'react-native';
 import AuthContent from '../Auth/AuthContent';
 
 function SignUpScreen() {
-    return(
-         <AuthContent isLogin={false} />
-    )
+  return <AuthContent/>;
 }
 
 export default SignUpScreen;

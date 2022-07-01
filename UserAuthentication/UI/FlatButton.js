@@ -15,6 +15,7 @@ function FlatButton({children, onPress}) {
 export default FlatButton;
 const styles = StyleSheet.create({
   button: {
+    // backgroundColor:'red',
     paddingHorizontal: 12,
     paddingVertical: 6,
   },

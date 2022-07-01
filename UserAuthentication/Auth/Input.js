@@ -5,12 +5,12 @@ import {COLOR} from '../constants/styles';
 function Input({label, keyboardType, secure, onUpdateValue, value, isInvalid}) {
 
   function updateVal(enteredVal) {
-    console.log(enteredVal);
     onUpdateValue(enteredVal)
   }
   return  (
     <View style={styles.inputContainer}>
-      <Text style={[styles.label && isInvalid && styles.labelInvalid]}>
+      <Text style={{color:'white'}}>
+        {/* {[styles.label && isInvalid && styles.labelInvalid]}> */}
         {label}
       </Text>
       <TextInput
@@ -31,7 +31,7 @@ export default Input;
 const styles = StyleSheet.create({
   inputContainer: {
     marginVertical: 8,
-    borderWidth: 1,
+    borderWidth: 0,
   },
   label: {
     color: 'white',
